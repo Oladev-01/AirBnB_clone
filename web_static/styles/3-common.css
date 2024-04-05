@@ -9,3 +9,12 @@ body {
         Arial,
         sans-serif;
 }
+
+header, footer {
+    width: 100%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}

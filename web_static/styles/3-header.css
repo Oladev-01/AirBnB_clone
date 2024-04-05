@@ -1,12 +1,27 @@
-.header {
+header {
     background-color: white;
-    height: 60px;
+    height: 90px;
+    border-bottom: 1px solid #CCCCCC;
     width: 100%;
-    border-bottom: 1px #CCCCCC;
     display: flex;
     align-items: center;
+    justify-content: left;
 }
 
 .logo {
-    margin-left: 20px;
+    margin-left: 80px;
+    height: 50px;
+    width: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        height: 70px;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+
 }

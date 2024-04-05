@@ -1,0 +1,251 @@
+/* class places */
+.places {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    bottom: 30px;
+}
+
+.places h1 {
+    font-size: 30px;
+}
+h2 {
+    flex-grow: 1;
+}
+.places_title {
+    padding-top: 30px;
+    margin-bottom: -30px;
+    margin-top: -20px;
+}
+/* end of class places */
+
+/* class articles*/
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -27px;
+}
+
+article {
+    width: 390px;
+    margin: 20px;
+    padding: 20px 0 0 30px;
+    border: solid #FF5A5F 1px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+article h2 {
+    font-size: 30px;
+    margin-top: -1px;
+    padding-left: 0%;
+}
+
+.article_name {
+    width: 100%;
+}
+
+.price_tag {
+    color: #FF5A5F;
+    border: 4px solid #FF5A5F;
+    min-width: 70px;
+    height: 70px;
+    font-size: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    margin-top: 10px;
+}
+
+.price_by_night {
+    margin-top: -1px;
+}
+
+.article_header {
+    display: flex;
+    height: 90px;
+}
+
+.information {
+    height: 80px;
+    border-top: solid #DDDDDD 1px;
+    border-bottom: solid #DDDDDD 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.guest {
+    width: 100px;
+    display: flex;
+    height: inherit;
+    flex-direction: column;
+    justify-content: center;
+}
+.guest, .guestroom, .bathroom {
+    margin-top: 5px;
+} 
+
+
+.group_icon {
+    height: inherit;
+    width: inherit;
+    background: url("../images/icon_group.png");
+    background-repeat: no-repeat;
+    margin-left: 35px;
+}
+
+.num_guests h2 {
+    font-size: 14px;
+    color: #484848;
+    font-weight: normal;
+}
+.num_guests h2, .num_rooms h2, .num_baths h2 {
+    margin-left: 19px;
+}
+
+.guestroom {
+    width: 100px;
+    display: flex;
+    height: inherit;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.room_icon {
+    height: inherit;
+    width: inherit;
+    background: url("../images/icon_bed.png");
+    background-repeat: no-repeat;
+    margin-left: 35px;
+}
+
+.num_rooms h2 {
+    font-size: 14px;
+    color: #484848;
+    font-weight: normal;
+}
+
+.bathroom {
+    width: 100px;
+    display: flex;
+    height: inherit;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bath_icon {
+    height: inherit;
+    width: inherit;
+    background: url("../images/icon_bath.png");
+    background-repeat: no-repeat;
+    margin-left: 35px;
+}
+
+.num_baths h2 {
+    font-size: 14px;
+    color: #484848;
+    font-weight: normal;
+}
+
+.user {
+    font-size: 14px;
+    color: #484848;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.description {
+    font-size: 14px;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+/* class amenities */
+.amenities h2 {
+    font-size: 16px;
+    margin-bottom: -23px;
+    text-align: left;
+}
+.amenities, .reviews {
+    height: inherit;
+}
+.amenities {
+    margin-top: 40px;
+}
+.amenities ul {
+    border-top: solid #DDDDDD 1px;
+    margin-top: 30px;
+    padding: 0;
+}
+.amenities li {
+    font-size: 14px;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    margin-bottom: 10px;
+    align-items: end;
+}
+
+/* end of class amenities*/
+.tv_icon {
+    background-image: url(../images/icon_tv.png);
+}
+.tv_txt, .wifi_txt,
+.pet_txt {
+    margin-left: 10px;
+}
+.pets_icon {
+    background-image: url(../images/icon_pets.png);
+}
+.wifi_icon {
+    background-image: url(../images/icon_wifi.png);
+}
+.tv_icon, .pets_icon, .wifi_icon
+{
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+}
+/* class reviews*/
+.reviews ul {
+    border-top: solid #DDDDDD 1px;
+    margin-top: -10px;
+    padding: 0;
+    margin-bottom: 0;
+}
+.reviews h2 {
+    font-size: 16px;
+    text-align: left;
+}
+.reviews ul li {
+    text-align: left;
+    list-style-type: none;
+    margin-bottom: -20px;
+}
+.reviews ul li h3 {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.reviews ul li p {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #fbfcfd;
+    margin-bottom: 0;
+}
