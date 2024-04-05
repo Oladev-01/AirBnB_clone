@@ -1,259 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-    <title>Airbnb clone</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/icon.png">
     <link rel="stylesheet" href="styles/4-common.css">
     <link rel="stylesheet" href="styles/3-header.css">
     <link rel="stylesheet" href="styles/3-footer.css">
     <link rel="stylesheet" href="styles/6-filters.css">
     <link rel="stylesheet" href="styles/100-places.css">
-    <link rel="icon" href="images/icon.png">
+    <title>AirBnB clone</title>
 </head>
 
 <body>
     <header>
-        <img src="images/logo.png" class="logo" alt="airbnb logo">
+        <img src="./images/logo.png" class="logo">
     </header>
     <div class="container">
         <section class="filters">
             <div class="locations">
                 <h3>States</h3>
-                <h4>Arizona California...</h4>
+                <h4>California, Arizona...</h4>
                 <ul class="popover">
                     <li>
                         <h2>Arizona:</h2>
-                    </li>
-                    <li>
-                        <ul class="popover_list">
-                            <li>page 1</li>
-                            <li>page 2</li>
-                            <li>page 3</li>
+                        <ul>
+                            <li>Page</li>
+                            <li>Page2</li>
                         </ul>
                     </li>
                     <li>
                         <h2>California:</h2>
-                    </li>
-                    <li>
-                        <ul class="popover_list">
+                        <ul>
                             <li>San Francisco</li>
                             <li>Los Altos</li>
-                            <li>Ajegunle</li>
                         </ul>
                     </li>
                 </ul>
             </div>
-            <div class="Amenities">
+            <div class="amenities">
                 <h3>Amenities</h3>
                 <h4>Internet, Kitchen...</h4>
                 <ul class="popover">
                     <li>Internet</li>
-                    <li>Kitchen</li>
                     <li>Tv</li>
-                    <li>Radio</li>
+                    <li>Kitchen</li>
+                    <li>Iron</li>
                 </ul>
             </div>
-            <button class="search-button">Search</button>
-        </section>
+            <button type="button" name="button">Search</button>
+        </section> <!-- end fiter-->
+
         <section class="places">
-            <div class="places-title">
-                <h1>Places</h1>
-            </div>
-            <div class="articles">
-                <article>
-                    <div class="article_header">
-                        <div class="article_name">
-                            <h2>My home</h2>
-                        </div>
-                        <div class="price_tag">
-                            <div class="price_by_night">
-                                $80
-                            </div>
-                        </div>
-                    </div>
-                    <div class="information">
-                        <div class="guest">
-                            <div class="group_icon">
-                            </div>
-                            <div class="num_guests">
-                                <h2>2 Guests</h2>
-                            </div>
-                        </div>
-                        <div class="guestroom">
-                            <div class="room_icon">
-                            </div>
-                            <div class="num_rooms">
-                                <h2>1 Bedroom</h2>
-                            </div>
-                        </div>
-                        <div class="bathroom">
-                            <div class="bath_icon">
-                            </div>
-                            <div class="num_baths">
-                                <h2>1 Bathroom</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="user">
-                        <b>Owner:</b> John Lennon
-                    </div>
-                    <div class="description">
-                        This is a lovely 1 bedroom and 1 bathroom apartment that can accomodate 2 people. It locats at the center of Shangai and next to subway line 1. 1 stop to People Square, 2 stops to Bund, 3 stops to Jingan Temple.
-                    </div>
-                    <div class="amenities">
-                        <h2>Amenities</h2>
-                        <ul>
-                            <li>
-                                <div class="tv_icon"></div><span class="tv_txt">TV</span>
-                                
-                            </li>
-                            <li>
-                                <div class="wifi_icon"></div>
-                                <span class="wifi_txt">WiFi</span>
-                            </li>
-                            <li>
-                                <div class="pets_icon"></div>
-                               <span class="pet_txt">Pets friendly</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="reviews">
-                       <h2>2 Reviews</h2>
-                       <ul>
+            <h1>Places</h1>
+            <article><!-- My home -->
+                <div class="article_places_header">
+                    <h2>My home</h2>
+                    <div class="price_by_night">$80</div>
+                </div>
+                <div class="information">
+                    <div class="max_guest">2 Guests</div>
+                    <div class="number_rooms">1 Bedroom</div>
+                    <div class="number_bathrooms">1 Bathroom</div>
+                </div><!-- end information -->
+                <div class="user">
+                    <p><b>Owner:</b> John Lennon</p>
+                </div><!-- end user -->
+                <div class="description">
+                    <p>This is a lovely 1 bathroom apartament that can accommodate 2 people. It locates at the center of
+                        Shanghai and next to subway line 1, 1 stop to People Square, 2 stops to Bund, 3 stops to Jungan
+                        Temle.</p>
+                </div><!-- end description -->
+                <div class="amenities">
+                    <h2>Amenities</h2>
+                    <ul>
                         <li>
-                            <h3>From Bob Dylan the 27th January 2017</h3>
-                            <p>Hunshi is an epic host. Nothing more i can say. 5 star!</p>
+                            <div class="places_amenities_pet_friendly"></div>
+                            Pet friendly
                         </li>
                         <li>
-                            <h3>From connor the 4th January 2017</h3>
-                            <p>Highly recommended!</p>
+                            <div class="places_amenities_tv"></div>
+                            Tv
                         </li>
-                       </ul>
-                    </div>
-                </article>
-                <article>
-                    <div class="article_header">
-                        <div class="article_name">
-                            <h2>Tiny house</h2>
-                        </div>
-                        <div class="price_tag">
-                            <div class="price_by_night">$65</div>
-                        </div>
-                    </div>
-                    <div class="information">
-                        <div class="guest">
-                            <div class="group_icon"></div>
-                            <div class="num_guests">
-                                <h2>4 Guests</h2>
-                            </div>
-                        </div>
-                        <div class="guestroom">
-                            <div class="room_icon"></div>
-                            <div class="num_rooms">
-                                <h2>2 Bedrooms</h2>
-                            </div>
-                        </div>
-                        <div class="bathroom">
-                            <div class="bath_icon">
-                            </div>
-                            <div class="num_baths">
-                                <h2>1 Bathroom</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="user">
-                        <b>Owner:</b> Adrienne
-                    </div>
-                    <div class="description">
-                        This is a lovely 2 bedroom and 1 bathroom apartment that can accomodate 4 people. It locats at the center of London and
-                        next to subway line 1. 1 stop to People Square, 2 stops to Newcastle, 3 stops to liverpool.
-                    </div>
-                    <div class="amenities">
-                        <div class="amenities_name">
-                            <h2>Amenities</h2>
-                        </div>
-                        <ul>
-                            <li>
-                                <div class="pets_icon"></div>
-                                <span class="pet_txt">Pets friendly</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="reviews">
-                        <h2>1 Review</h2>
-                        <ul>
-                            <li>
-                                <h3>From Max the 27th January 2017</h3>
-                                <p>Fantastic place. It was clean. Adrienne was great(even though we did not meet in person) and everything was super smooth. Location is also great if you like running and a bit more quiet. I would suggest a car or take into consideration that you might have to Uber into the city from the location. Overall, i would recommend the place anytime</p>
-                            </li>
-                        </ul>
-                    </div>
-                </article>
-                <article>
-                    <div class="article_header">
-                        <div class="article_name">
-                            <h2>A suite</h2>
-                        </div>
-                        <div class="price_tag">
-                            <div class="price_by_night">$190</div>
-                        </div>
-                    </div>
-                    <div class="information">
-                        <div class="guest">
-                            <div class="group_icon"></div>
-                            <div class="num_guests">
-                                <h2>6 Guests</h2>
-                            </div>
-                        </div>
-                        <div class="guestroom">
-                            <div class="room_icon"></div>
-                            <div class="num_rooms">
-                                <h2>5 Bedrooms</h2>
-                            </div>
-                        </div>
-                        <div class="bathroom">
-                            <div class="bath_icon">
-                            </div>
-                            <div class="num_baths">
-                                <h2>3 Bathrooms</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="user">
-                        <b>Owner:</b> Mojibola Olalekan
-                    </div>
-                    <div class="description">
-                        This is a lovely 1 bedroom and 1 bathroom apartment that can accomodate 2 people. It locats at the center of Shangai and
-                        next to subway line 1. 1 stop to People Square, 2 stops to Bund, 3 stops to Jingan Temple.
-                    </div>
-                    <div class="amenities">
-                        <div class="amenities_name">
-                            <h2>Amenities</h2>
-                        </div>
-                        <ul>
-                            <li>
-                                <div class="pets_icon"></div>
-                                <span class="pet_txt">Pets friendly</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="reviews">
-                        <h2>1 Review</h2>
-                        <ul>
-                            <li>
-                                <h3>From Max the 27th January 2017</h3>
-                                <p>Fantastic place. It was clean. Adrienne was great(even though we did not meet in person) and everything was
-                                    super smooth. Location is also great if you like running and a bit more quiet. I would suggest a car or take
-                                    into consideration that you might have to Uber into the city from the location. Overall, i would recommend
-                                    the place anytime</p>
-                            </li>
-                        </ul>
-                    </div>
-                </article>
-            </div>
-        </section>
+                        <li>
+                            <div class="places_amenities_wifi"></div>
+                            Wifi
+                        </li>
+                    </ul>
+                </div>
+                <div class="reviews">
+                    <h2>2 Reviews</h2>
+                    <ul>
+                        <li>
+                            <h3>From Bob Dylan the 27th August 2022</h3>
+                            <p>Runshi is an epic host. Nothing more i can say. 5 star!</p>
+                        </li>
+                        <li>
+                            <h3>From Connor 4th August 2022</h3>
+                            <p>Higly recommended!</p>
+                        </li>
+                    </ul>
+                </div>
+            </article><!-- end My home -->
+
+            <article>
+                <h2>Tiny house</h2>
+                <div class="price_by_night">$65</div>
+                <div class="information">
+                    <div class="max_guest">4 Guests</div>
+                    <div class="number_rooms">2 Bedrooms</div>
+                    <div class="number_bathrooms">1 Bathroom</div>
+                </div><!-- end information -->
+                <div class="user">
+                    <p><b>Owner:</b> Addrienne</p>
+                </div><!-- end user -->
+                <div class="description">
+                    <p>Our place is a privete, afffordable satan-alone guest house centrally located just minutes to
+                        French Quarters, downtown th Fair Grounds (Jazz Fest) and City Park. The guest house is a
+                        quaint, 400 suare ft. with a full bath, mini kitchen, & livin room. The extra high cellings make
+                        the home feel more spacious. The sofa converts to bed also. We have a hand made counter area
+                        that adds character to the room and a great porch/deck to relax on and have a glass of Merlot.
+                    </p>
+                </div><!-- end description -->
+                <div class="amenities">
+                    <h2>Amenities</h2>
+                    <ul>
+                        <li>
+                            <div class="places_amenities_pet_friendly"></div>
+                            Pet friendly
+                        </li>
+                    </ul>
+                </div>
+                <div class="reviews">
+                    <h2>1 Review</h2>
+                    <ul>
+                        <li>
+                            <h3>From Max the 15th August 2022</h3>
+                            <p>Runshi is an epic host. Nothing more i can say. 5 star!</p>
+                        </li>
+                        <li>
+                            <h3>From Connor 4th August 2022</h3>
+                            <p>Higly recommended!</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article>
+                <h2>A suite</h2>
+                <div class="price_by_night">$190</div>
+                <div class="information">
+                    <div class="max_guest">5 Guests</div>
+                    <div class="number_rooms">3 Bedroom</div>
+                    <div class="number_bathrooms">2 Bathroom</div>
+                </div><!-- end information -->
+                <div class="user">
+                    <p><b>Owner:</b> Mick Jagger</p>
+                </div><!-- end user -->
+                <div class="description">
+                    <p>First loft built by Holbies. It contains a decked terrace, jacuzzi, firepit, rabbits garden, two
+                        rooms, two balconies, entrance gate, private garden, private parking, BBQ area, AC in each
+                        bedroom, technological equipment, luxury beds, and mountain views. Ideal for architecture
+                        lovers, romantic dates, or having a good time. It is a unique space of his kind. Only pets that
+                        do not harm rabbits are allowed.</p>
+                </div><!-- end description -->
+                <div class="amenities">
+                    <h2>Amenities</h2>
+                    <ul>
+                        <li>
+                            <div class="places_amenities_pet_friendly"></div>
+                            Pet friendly
+                        </li>
+                        <li>
+                            <div class="places_amenities_tv"></div>
+                            Tv
+                        </li>
+                        <li>
+                            <div class="places_amenities_wifi"></div>
+                            Wifi
+                        </li>
+                    </ul>
+                </div>
+                <div class="reviews">
+                    <h2>1 Review</h2>
+                    <ul>
+                        <li>
+                            <h3>From Ayomide Suara the 15th August, 2022</h3>
+                            <p>I love this place. Amazing!</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </section> <!-- end section -->
     </div>
-    <footer>Best School</footer>
+    <footer>
+        <p>Best School</p>
+    </footer>
 </body>
 
 </html>
