@@ -19,4 +19,4 @@ CONTRIBUTORS
 See the AUTHORS
 
 License
-This project is licensed under the MIT License. The MIT License symbol: &#169; or \u00A9.
+This project is licensed under the MIT License. The MIT License symbol: &#169;
