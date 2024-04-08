@@ -19,4 +19,5 @@ CONTRIBUTORS
 See the AUTHORS
 
 License
-This project is licensed under the MIT License. The MIT License symbol: &#169;
+This project is licensed under the MIT License.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
