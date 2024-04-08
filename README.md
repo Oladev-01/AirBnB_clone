@@ -1,7 +1,7 @@
 Airbnb Clone
 
 Overview
-Welcome to the Airbnb Clone repository! This project is part of the introduction to HTML and CSS course at [Your School]. The goal of this project is to recreate the user interface of the Airbnb website using HTML and CSS.
+Welcome to the Airbnb Clone repository! This project is part of the introduction to HTML and CSS course at Alx Africa. The goal of this project is to recreate the user interface of the Airbnb website using HTML and CSS.
 
 Features
 * Responsive Design: Our Airbnb Clone is designed to look great on all devices, from desktops to smartphones.
@@ -19,4 +19,4 @@ CONTRIBUTORS
 See the AUTHORS
 
 License
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. The MIT License symbol: &#169; or \u00A9.
