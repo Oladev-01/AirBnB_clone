@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import unittest
 from models import storage
+from models.engine.file_storage import FileStorage
 import json
 from models.base_model import BaseModel
 
@@ -8,6 +9,10 @@ class Test_for_storage(unittest.TestCase):
     def setUp(self):
         self.all_objs = storage.all()
     
+    def test_file_path(self):
+        file_path = FileStorage.get_file_path()
+        self.assertEqual(file_path, "file.json")
+
     def test_reload(self):
         for key in self.all_objs.keys():
             obj = self.all_objs[key]

@@ -19,7 +19,9 @@ class FileStorage:
         of BaseModel.id"""
         key = "{}.{}".format(obj.__class__.__name__, obj.id)
         FileStorage.__objects[key] = obj
-
+    @classmethod
+    def get_file_path(cls):
+        return cls.__file_path
     def save(self):
         """this method saves the dictionary instances of the class created and
         writes them to the json file"""
