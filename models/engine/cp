@@ -1,0 +1,33 @@
+#!/usr/bin/python3
+import json
+import os
+"""this module defines a class FileStorage that serializes and deserializes instances of the class BaseModel to and 
+from a file"""
+
+
+class FileStorage:
+
+    __file_path = "file.json"
+    __objects = {}
+
+    def new(self, obj):
+        key = "{}.{}".format(obj.__class__.__name__, obj.id)
+        FileStorage.__objects[key] = obj
+    def save(self):
+        """Serializes __objects to the JSON file (path: __file_path)."""
+        serial_objs = {key: obj.to_dict() for key, obj in FileStorage.__objects.items()}
+        with open(FileStorage.__file_path, 'w') as f:
+            json.dump(serial_objs, f)
+    def reload(self):
+        try:
+            with open(FileStorage.__file_path, 'r') as f:
+                serialized_objs = json.load(f)
+                for key, value in serialized_objs.items():
+                    class_name, obj_id = key.split('.')
+                    module = __import__('models.base_model', fromlist=[class_name])
+                    cls = getattr(module, class_name)
+                    FileStorage.__objects[key] = cls(**value)
+        except (FileNotFoundError, json.JSONDecodeError):
+            pass  # If the file doesn't exist, do nothing.
+    def all(self):
+        return FileStorage.__objects
