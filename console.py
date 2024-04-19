@@ -28,6 +28,8 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** class doesn't exist **")
     def do_show(self, args):
+        """command to display an instance of the class from storage
+        Usage: show <BaseModel> <id>"""
         cls = args.split()
         if not cls:
             print("** class name missing **")
@@ -50,6 +52,10 @@ class HBNBCommand(cmd.Cmd):
         if not found_inst:
             print("** no instance found **")
     def do_destroy(self, arg):
+        """command to delete an instance of the BaseModel
+        from storage. 
+        N.B: atr_name must not be id, created_at or updated_at
+        Usage: destroy <BaseModel> <id>"""
         args = arg.split()
         if not args:
             print("** class name missing **")
@@ -72,6 +78,9 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
     
     def do_all(self, arg):
+        """command to print all saved instances of the class
+        from the storage
+        Usage: all OR all <BaseModel>"""
         all_li = []
         all_obj = storage.all().values()
         if not arg:
@@ -87,6 +96,9 @@ class HBNBCommand(cmd.Cmd):
             print(all_li)
         
     def do_update(self, arg):
+        """command to update an instance of BaseModel with an
+        attribute name and its value
+        Usage: update <BaseModel> <id> <atr_name> <atr_val> """
         if not arg:
             print("** class name missing **")
             return
@@ -113,8 +125,7 @@ class HBNBCommand(cmd.Cmd):
                     key_name, key_id = keys.split('.')
                     if key_id == cls_id:
                         setattr(all_objs[keys], atr_name, eval(atr_val))
-                        model = eval(cls_name)(**all_objs)
-                        model.save()
+                        all_objs[keys].save()
                         found = True
                 if not found:
                      print("** no instance found **")

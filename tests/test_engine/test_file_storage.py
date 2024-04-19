@@ -2,21 +2,27 @@
 import unittest
 from models import storage
 from models.engine.file_storage import FileStorage
-import json
+import json, os
 from models.base_model import BaseModel
 
 class Test_for_storage(unittest.TestCase):
     def setUp(self):
         self.all_objs = storage.all()
-    
+        self.test_data = {"TestModel.1234": {"id": "1234", "name": "Test"}}
+        with open("test_file.json", "w") as f:
+            json.dump(self.test_data, f)
+
+    def tearDown(self):
+        os.remove("test_file.json")
     def test_file_path(self):
         file_path = FileStorage.get_file_path()
         self.assertEqual(file_path, "file.json")
 
     def test_reload(self):
-        for key in self.all_objs.keys():
-            obj = self.all_objs[key]
-            print(obj)
+        store = FileStorage()
+        store._FileStorage__file_path = "test_file.json"
+        store.reload()
+        self.assertEqual(store.all(), self.test_data)
 
     def test_inst(self):
         self.model = BaseModel()
@@ -32,3 +38,6 @@ class Test_for_storage(unittest.TestCase):
             self.assertTrue(isinstance(file, dict))
         except FileNotFoundError:
             pass
+    
+    if __name__ == "__main__":
+        unittest.main()

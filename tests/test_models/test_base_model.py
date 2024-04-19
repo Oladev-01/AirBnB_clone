@@ -37,5 +37,7 @@ class Test_for_cases(unittest.TestCase):
         self.assertIn('updated_at', model)
         self.assertNotEqual(self.sec_mod_upd.updated_at, model['updated_at'])
     
+    def test_save(self):
+        
     if __name__ == "__main__":
         unittest.main()
