@@ -1,23 +1,32 @@
 #!/usr/bin/python3
 from models.base_model import BaseModel
 from models import storage
-import cmd, sys
+import cmd
+import sys
+"""This module defines the console for the Airbnb clone project"""
+
+
 class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
+
     def do_quit(self, arg):
         """Quit command to exit the program"""
+
         return True
-    
+
     def do_EOF(self, arg):
         """this command marks the end of command"""
+
         return True
-    
+
     def emptyline(self):
         """Do"""
+
         pass
 
     def do_create(self, arg):
         """command to create a new instance of BaseModel"""
+
         if not arg:
             print("** class name missing **")
             return
@@ -27,17 +36,19 @@ class HBNBCommand(cmd.Cmd):
             print(model.id)
         else:
             print("** class doesn't exist **")
+
     def do_show(self, args):
         """command to display an instance of the class from storage
         Usage: show <BaseModel> <id>"""
+
         cls = args.split()
         if not cls:
             print("** class name missing **")
             return
         cls_name = cls[0]
         if cls_name not in globals():
-                print("** class doesn't exist **")
-                return
+            print("** class doesn't exist **")
+            return
         if len(cls) < 2:
             print('** instance id missing **')
             return
@@ -51,11 +62,13 @@ class HBNBCommand(cmd.Cmd):
                 break
         if not found_inst:
             print("** no instance found **")
+
     def do_destroy(self, arg):
         """command to delete an instance of the BaseModel
-        from storage. 
+        from storage.
         N.B: atr_name must not be id, created_at or updated_at
         Usage: destroy <BaseModel> <id>"""
+
         args = arg.split()
         if not args:
             print("** class name missing **")
@@ -76,11 +89,12 @@ class HBNBCommand(cmd.Cmd):
                 break
         if not found_inst:
             print("** no instance found **")
-    
+
     def do_all(self, arg):
         """command to print all saved instances of the class
         from the storage
         Usage: all OR all <BaseModel>"""
+
         all_li = []
         all_obj = storage.all().values()
         if not arg:
@@ -94,11 +108,12 @@ class HBNBCommand(cmd.Cmd):
                 for key in all_obj:
                     all_li.append(str(key))
             print(all_li)
-        
+
     def do_update(self, arg):
         """command to update an instance of BaseModel with an
         attribute name and its value
         Usage: update <BaseModel> <id> <atr_name> <atr_val> """
+
         if not arg:
             print("** class name missing **")
             return
@@ -128,7 +143,8 @@ class HBNBCommand(cmd.Cmd):
                         all_objs[keys].save()
                         found = True
                 if not found:
-                     print("** no instance found **")
+                    print("** no instance found **")
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
