@@ -108,6 +108,7 @@ class HBNBCommand(cmd.Cmd):
         else:
             if arg not in globals():
                 print("** class doesn't exist **")
+                return
             else:
                 for key in all_obj:
                     all_li.append(str(key))
