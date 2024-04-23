@@ -80,6 +80,9 @@ class HBNBCommand(cmd.Cmd):
             return
         all_obj = storage.all()
         found_inst = False
+        if len(args) != 2:
+            print("** instance id missing **")
+            return
         for key in all_obj.keys():
             key_name, key_id = key.split('.')
             if key_id == args[1]:
