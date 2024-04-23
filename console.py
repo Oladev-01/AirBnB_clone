@@ -1,9 +1,10 @@
 #!/usr/bin/python3
+"""This module defines the console for the Airbnb clone project"""
+
 from models.base_model import BaseModel
 from models import storage
 import cmd
 import sys
-"""This module defines the console for the Airbnb clone project"""
 
 
 class HBNBCommand(cmd.Cmd):
