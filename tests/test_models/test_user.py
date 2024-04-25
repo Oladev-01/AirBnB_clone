@@ -8,6 +8,7 @@ class TestUser(unittest.TestCase):
     def setUp(self):
         self.user = User()
         self.all_objs = storage.all()
+
     def test_init(self):
         self.assertEqual(self.user.password, "")
         self.assertEqual(self.user.first_name, "")
@@ -35,7 +36,10 @@ class TestUser(unittest.TestCase):
         for key in self.all_objs.keys():
             if key_user in key:
                 self.assertTrue(True)
-
+    def test_instance(self):
+        self.assertTrue(type(self.user.email) is str)
+        self.assertTrue(self.user.email == "")
     
     if __name__ == "__main__":
         unittest.main()
+

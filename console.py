@@ -27,7 +27,8 @@ class HBNBCommand(cmd.Cmd):
         pass
 
     def do_create(self, arg):
-        """command to create a new instance of BaseModel"""
+        """command to create a new instance of BaseModel
+        usage: create <class_name>"""
 
         if not arg:
             print("** class name missing **")

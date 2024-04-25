@@ -7,10 +7,6 @@ from models.base_model import BaseModel
 
 class User(BaseModel):
     """this class creates a new user"""
-
+    [email, first_name, last_name, password] = ["", "", "", ""]
     def __init__(self, *args, **kwargs):
         super().__init__(self, *args, *kwargs)
-        self.email = kwargs.get('email', "")
-        self.password = kwargs.get('password', "")
-        self.first_name = kwargs.get('first_name', "")
-        self.last_name = kwargs.get('last_name', "")
