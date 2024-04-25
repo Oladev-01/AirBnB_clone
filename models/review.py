@@ -4,7 +4,7 @@
 from models.base_model import BaseModel
 
 
-class Amenity(BaseModel):
+class Review(BaseModel):
     """this class defines the City for the program"""
     place_id = ""
     user_id = ""
