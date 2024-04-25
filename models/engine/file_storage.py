@@ -39,6 +39,8 @@ class FileStorage:
                     cls_name, ob_id = key.split('.')
                     if cls_name == "User":
                         module = __import__("models.user", fromlist=[cls_name])
+                    elif cls_name == "State":
+                        module = __import__("models.state", fromlist=[cls_name])
                     else:
                         module = __import__("models.base_model",
                                             fromlist=[cls_name])

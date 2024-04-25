@@ -20,9 +20,9 @@ class BaseModel:
                     continue
                 if key in ("created_at", "updated_at"):
                     value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
-                setattr(self, key, value) 
+                setattr(self, key, value)
         else:
-            storage.new(self)           
+            storage.new(self)
 
     def __str__(self):
         return "[{}] ({}) {}".format(self.__class__.__name__, self.id,
