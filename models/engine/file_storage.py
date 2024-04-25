@@ -2,7 +2,6 @@
 import json
 """this module defines the storage engine for the class"""
 
-
 class FileStorage:
     """this class saves and writes each instances of the class
     created to a json file"""
@@ -38,8 +37,11 @@ class FileStorage:
                 de_serial = json.load(f)
                 for key, value in de_serial.items():
                     cls_name, ob_id = key.split('.')
-                    module = __import__("models.base_model",
-                                        fromlist=[cls_name])
+                    if cls_name == "User":
+                        module = __import__("models.user", fromlist=[cls_name])
+                    else:
+                        module = __import__("models.base_model",
+                                            fromlist=[cls_name])
                     cls = getattr(module, cls_name)
                     FileStorage.__objects[key] = cls(**value)
         except FileNotFoundError:

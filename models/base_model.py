@@ -1,9 +1,10 @@
 #!/usr/bin/python3
+"""This module contains the base class for all classes that would be
+written and used for the project"""
+
 import uuid
 from datetime import datetime
 from models import storage
-"""This module contains the base class for all classes that would be
-written and used for the project"""
 
 
 class BaseModel:
