@@ -41,6 +41,14 @@ class FileStorage:
                         module = __import__("models.user", fromlist=[cls_name])
                     elif cls_name == "State":
                         module = __import__("models.state", fromlist=[cls_name])
+                    elif cls_name == "Place":
+                        module = __import__("models.place", fromlist=[cls_name])
+                    elif cls_name == "City":
+                        module = __import__("models.city", fromlist=[cls_name])
+                    elif cls_name == "Amenity":
+                        module = __import__("models.amenity", fromlist=[cls_name])
+                    elif cls_name == "Review":
+                        module = __import__("models.place", fromlist=[cls_name])
                     else:
                         module = __import__("models.base_model",
                                             fromlist=[cls_name])
