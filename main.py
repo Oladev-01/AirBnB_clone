@@ -72,21 +72,20 @@ def exec_command(my_console, the_command, last_lines = 1):
 """
  Tests
 """
-result = exec_command(my_console, "create City")
+result = exec_command(my_console, "create Place")
 if result is None or result == "":
     print("FAIL: No ID retrieved")
     
-with open(file_path, "r") as file:
-    s_file = file.read()
-    if result not in s_file:
-        print("FAIL: New ID not in the JSON file")
-
 model_id = result
-exec_command(my_console, "destroy City {}".format(model_id))
-with open(file_path, "r") as file:
-    s_file = file.read()
-    if result in s_file:
-        print("FAIL: New ID is still in the JSON file")
+
+result = exec_command(my_console, "show State {}".format(model_id))
+if result is None or result == "":
+    print("FAIL: no output")
+    
+search_str = "** no instance found **"
+if result != search_str:
+    print("FAIL: wrong output \"{}\" instead of \"{}\"".format(result, search_str))
+    
 print("OK", end="")
 
 shutil.copy("tmp_console_main.py", "console.py")

@@ -64,8 +64,9 @@ class HBNBCommand(cmd.Cmd):
         found_inst = False
         for key in all_obj.keys():
             key_name, key_id = key.split('.')
-            if key_id == cls[1]:
-                print(all_obj[key])
+            if key_name == cls_name and key_id == cls[1]:
+                key_ins = f"{key_name}.{key_id}"
+                print(all_obj[key_ins])
                 found_inst = True
                 break
         if not found_inst:
