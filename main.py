@@ -78,7 +78,7 @@ if result is None or result == "":
     
 model_id = result
 
-result = exec_command(my_console, "show State {}".format(model_id))
+result = exec_command(my_console, "destroy City {}".format(model_id))
 if result is None or result == "":
     print("FAIL: no output")
     

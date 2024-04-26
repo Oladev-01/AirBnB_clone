@@ -93,10 +93,9 @@ class HBNBCommand(cmd.Cmd):
             return
         for key in all_obj.keys():
             key_name, key_id = key.split('.')
-            if key_id == args[1]:
-                del all_obj[key]
-                model = eval(key_name)(**all_obj)
-                model.save()
+            if key_name == cls_name and key_id == args[1]:
+                key_ins = f"{key_name}.{key_id}"
+                del all_obj[key_ins]
                 found_inst = True
                 break
         if not found_inst:
