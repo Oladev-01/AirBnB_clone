@@ -96,6 +96,7 @@ class HBNBCommand(cmd.Cmd):
             if key_name == cls_name and key_id == args[1]:
                 key_ins = f"{key_name}.{key_id}"
                 del all_obj[key_ins]
+                all_obj = storage.save()
                 found_inst = True
                 break
         if not found_inst:
